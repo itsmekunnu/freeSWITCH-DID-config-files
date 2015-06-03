@@ -1,0 +1,34 @@
+<include>
+  <gateway name="ipkall-inbound">
+    <param name="username" value="2532432058"/>
+    <param name="password" value="ipkall1234"/>
+
+    <param name="realm" value="$${local_ip_v4}"/>
+<!--    <param name="realm" value="sipus-inbound"/>  -->
+    <param name="extension" value="1001"/>
+    <param name="proxy" value="64.40.49.128"/>
+    <param name="register-proxy" value="64.40.49.128"/>
+    <param name="expire-seconds" value="90"/>
+    <param name="auth-calls" value="false"/>
+    <param name="register" value="false" />
+    <param name="apply-inbound-acl" value="ipkall-inbound"/>
+  </gateway>
+
+  <gateway name="ipkall-inbound1">
+    <param name="username" value="12532432058"/>
+    <param name="password" value="ipkall1234"/>
+
+    <param name="realm" value="$${local_ip_v4}"/>
+<!--    <param name="realm" value="sipus-inbound"/>  -->
+    <param name="extension" value="1001"/>
+    <param name="proxy" value="voiper.ipkall.com"/>
+    <param name="register-proxy" value="voiper.ipkall.com"/>
+    <param name="expire-seconds" value="90"/>
+    <param name="auth-calls" value="false"/>
+    <param name="register" value="false" />
+    <param name="apply-inbound-acl" value="ipkall-inbound"/>
+  </gateway>
+
+</include>
+
+

@@ -1,0 +1,22 @@
+<include>
+  <gateway name="sipus-outbound">
+    <param name="username" value="5264344428"/>
+    <param name="password" value="bk5bdpaxndtv"/>
+    <param name="realm" value="sipus-outbound"/>
+    <param name="proxy" value="gw1.sip.us"/>
+    <param name="register" value="false"/>
+  </gateway>
+  <gateway name="sipus-inbound">
+    <param name="username" value="5264344428"/>
+    <param name="password" value="bk5bdpaxndtv"/>
+    <param name="realm" value="$${local_ip_v4}"/>
+<!--    <param name="realm" value="sipus-inbound"/>  -->
+    <param name="extension" value="1000"/>
+    <param name="proxy" value="gw1.sip.us"/>
+    <param name="register-proxy" value="gw.sip.us"/>
+    <param name="expire-seconds" value="90"/>
+    <param name="auth-calls" value="false"/>
+    <param name="register" value="false" />
+    <param name="apply-inbound-acl" value="sipus-inbound"/>
+  </gateway>
+</include>

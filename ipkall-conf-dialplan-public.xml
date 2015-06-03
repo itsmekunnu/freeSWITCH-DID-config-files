@@ -1,0 +1,63 @@
+<include>
+
+  <extension name="IPKALL">
+    <condition field="destination_number" expression="^1020$">
+      <action application="set" data="domain_name=$${domain}"/>
+      <action application="transfer" data="1020 XML default"/>
+    </condition>
+  </extension>
+  <extension name="IPKALL1">
+    <condition field="destination_number" expression="^4153493300$">
+      <action application="set" data="domain_name=59.99.250.70"/>
+      <action application="transfer" data="1001 XML default"/>
+    </condition>
+  </extension>
+  <extension name="IPKALL2">
+    <condition field="destination_number" expression="^\+?1?(4153493300)$">
+      <action application="set" data="domain_name=$${domain}"/>
+      <action application="transfer" data="1005 XML public"/>
+    </condition>
+  </extension>
+
+<extension name="IPKALL3">
+    <condition field="destination_number" expression="^\+?1?(4153493300)$">
+      <action application="set" data="domain_name=59.99.250.70"/>
+      <action application="transfer" data="1001 XML default"/>
+    </condition>
+  </extension>
+<extension name="IPKALL4">
+    <condition field="destination_number" expression="^\+?1?(4153493300)$">
+      <action application="set" data="domain_name=10.0.0.3"/>
+      <action application="transfer" data="1001 XML default"/>
+    </condition>
+  </extension>
+
+  <extension name="IPKALL7">
+    <condition field="destination_number" expression="^\+?1?(2532432058)$">
+      <action application="set" data="domain_name=$${domain}"/>
+      <action application="transfer" data="1001 XML public"/>
+    </condition>
+  </extension>
+
+  <extension name="IPKALL8">
+    <condition field="destination_number" expression="^(1001)$">
+      <action application="set" data="domain_name=$${domain}"/>
+      <action application="transfer" data="1001 XML public"/>
+    </condition>
+  </extension>
+
+<extension name="IPKALL5">
+    <condition field="destination_number" expression="^\+?1?(2532432058)$">
+      <action application="set" data="domain_name=10.0.0.3"/>
+      <action application="transfer" data="1001 XML default"/>
+    </condition>
+  </extension>
+<extension name="IPKALL6">
+    <condition field="destination_number" expression="^\+?1?(2532432058)$">
+      <action application="set" data="domain_name=59.99.250.70"/>
+      <action application="transfer" data="1001 XML default"/>
+    </condition>
+  </extension>
+
+
+</include>
